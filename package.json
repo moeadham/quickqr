@@ -8,7 +8,6 @@
     "querystring": "0.2.x",
     "request": "2.27.x",
     "newrelic":  "1.1.1",
-    "jsdom": "0.8.10",
-    "zbar" : "0.0.4"
+    "jsdom": "0.8.10"
   }
 }

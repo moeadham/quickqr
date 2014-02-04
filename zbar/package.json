@@ -1,0 +1,39 @@
+{
+  "name": "zbar",
+  "author": {
+    "name": "Tom Gallacher"
+  },
+  "description": "node-zbar is a NodeJS binding to the ZBar QR Code library.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tomgco/node-zbar.git"
+  },
+  "keywords": [
+    "qrcode",
+    "qr",
+    "scan"
+  ],
+  "version": "0.0.4",
+  "engine": "~0.6",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "readme": "# Node ZBar\n\nnode-zbar is a NodeJS binding to the ZBar QR Code library. Initially this will spawn a child process and monitor the output. But eventually it will be a C++ module.\n\n## Installation\n\nTo use node-zbar, you will install the prerequisite of ZBar.\n    \nCompile from source see\n\n    http://zbar.sourceforge.net/\n   \nNode-zbar can then be installed via NPM\n\n    npm install zbar\n\n\nThen, require the module\n\n    var zbar = require('zbar');\n\n\n## Usage\n\n    zbar.watch(device, [options], listener)\n    \nWatch for data on device. `device` is a path to a supported webcam device. For example `/dev/video0`\n\nThe second argument is optional. The options if provided should be an object. The list of available options are as following:\n\n`width` - scale the width of the sampled image\n\n`height` - scale the width of the sampled image\n\n`dataType` - can be `raw` or `xml`. default is `raw`\n\nThe listener callback gets two arguments (error, data). Data is the data returned from a barcode.\n\nExample:\n\n    zbar.watch('/dev/video0', function (event) {\n      console.log('event is: ' + event);\n    });\n\n## Licence\nLicensed under the [New BSD License](http://opensource.org/licenses/bsd-license.php)",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/tomgco/node-zbar/issues"
+  },
+  "homepage": "https://github.com/tomgco/node-zbar",
+  "_id": "zbar@0.0.4",
+  "dist": {
+    "shasum": "7afdd62452f06300a7585eeb29b43a744848fde0"
+  },
+  "_from": "zbar@0.0.4",
+  "_resolved": "https://registry.npmjs.org/zbar/-/zbar-0.0.4.tgz"
+}
