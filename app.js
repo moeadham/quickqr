@@ -11,6 +11,8 @@ server.set('title', 'NodeJS REST Server');
 // simple logger
 server.use(function(req, res, next){
     console.log('%s %s', req.method, req.url);
+    res.header("Access-Control-Allow-Origin", "*");
+  	res.header("Access-Control-Allow-Headers", "X-Requested-With");
     next();
 });
 
