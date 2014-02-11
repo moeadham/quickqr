@@ -14,7 +14,7 @@ module.exports.createWatcher = function(device, options) {
 
   var zbarArguments =
       [ '--prescale=' + options.width + 'x' + options.height
-//      , '--nodisplay'
+      , '--nodisplay',
       ]
     , zbar
     ;
